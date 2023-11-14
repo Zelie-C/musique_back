@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "interpretes",
+  "info": {
+    "singularName": "interprete",
+    "pluralName": "interpretes",
+    "displayName": "Interprete",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nom": {
+      "type": "string",
+      "required": true
+    },
+    "prenom": {
+      "type": "string"
+    },
+    "naissance": {
+      "type": "string"
+    },
+    "musiques": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::musique.musique",
+      "mappedBy": "interpretes"
+    }
+  }
+}

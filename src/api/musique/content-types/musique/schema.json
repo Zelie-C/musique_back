@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "musiques",
+  "info": {
+    "singularName": "musique",
+    "pluralName": "musiques",
+    "displayName": "Musique"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    },
+    "interpretes": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::interprete.interprete",
+      "inversedBy": "musiques"
+    },
+    "favorite": {
+      "type": "boolean"
+    },
+    "release": {
+      "type": "date"
+    },
+    "color": {
+      "type": "string"
+    }
+  }
+}
